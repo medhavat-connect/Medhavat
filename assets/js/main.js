@@ -178,21 +178,46 @@ function initContactForm() {
   const successBox = document.querySelector('#contact-success');
   if (!form) return;
 
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', async e => {
     e.preventDefault();
 
     const submitBtn = form.querySelector('button[type="submit"]');
+    const originalText = submitBtn ? submitBtn.textContent : '';
     if (submitBtn) {
       submitBtn.disabled = true;
       submitBtn.textContent = 'Submitting...';
     }
 
-    setTimeout(() => {
-      form.style.display = 'none';
-      if (successBox) {
-        successBox.classList.add('visible');
+    const formData = new FormData(form);
+    // Add Web3Forms access key from Vite env
+    formData.append("access_key", import.meta.env.VITE_WEB3FORMS_ACCESS_KEY);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+      const data = await response.json();
+      
+      if (data.success) {
+        form.style.display = 'none';
+        if (successBox) {
+          successBox.classList.add('visible');
+        }
+      } else {
+        alert("Something went wrong. Please try again.");
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalText;
+        }
       }
-    }, 600);
+    } catch (err) {
+      alert("Network error. Please check your connection and try again.");
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+      }
+    }
   });
 }
 
