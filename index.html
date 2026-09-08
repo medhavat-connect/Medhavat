@@ -18,6 +18,7 @@
   <!-- Critical Font Preloading for LCP & Typography Stability -->
   <link rel="preload" href="./assets/fonts/PlusJakartaSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="./assets/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="dns-prefetch" href="https://wa.me">
 
   <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
   <meta property="og:type" content="website">
@@ -51,6 +52,7 @@
         "name": "Medhavat",
         "legalName": "Medhavat Technologies",
         "url": "https://medhavat.com",
+        "telephone": "+917387853665",
         "logo": {
           "@type": "ImageObject",
           "url": "https://medhavat.com/assets/images/medhavat-logo.svg",
@@ -74,7 +76,7 @@
         },
         "contactPoint": {
           "@type": "ContactPoint",
-          "telephone": "+91 73878 53665",
+          "telephone": "+917387853665",
           "contactType": "customer service",
           "email": "info@medhavat.com",
           "availableLanguage": ["English", "Hindi", "Marathi"]
@@ -146,12 +148,18 @@
   }
   </script>
 
-  <!-- Self-Hosted Stylesheets -->
+  <!-- Critical Above-the-Fold Stylesheets -->
   <link rel="stylesheet" href="./assets/css/tokens.css">
   <link rel="stylesheet" href="./assets/css/cursor-wave.css">
   <link rel="stylesheet" href="./assets/css/components.css">
-  <link rel="stylesheet" href="./assets/css/theme-hud.css">
-  <link rel="stylesheet" href="./assets/css/cookie-consent.css">
+
+  <!-- Non-Critical Stylesheets (Loaded Asynchronously to Unblock First Paint & Eliminate Render-Blocking) -->
+  <link rel="preload" href="./assets/css/theme-hud.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="./assets/css/cookie-consent.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="./assets/css/theme-hud.css">
+    <link rel="stylesheet" href="./assets/css/cookie-consent.css">
+  </noscript>
 </head>
 <body data-page="home">
 

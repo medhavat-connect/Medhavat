@@ -3,22 +3,39 @@
  * Full-Page Binary Greyscale CursorWave & Interactive Features
  */
 import { CursorWave } from './cursor-wave.js';
-import { initThemeHud, THEME_CW_COLORS, THEME_CW_BG } from './theme-hud.js';
+import { applySavedTheme, initThemeHud, THEME_CW_COLORS, THEME_CW_BG } from './theme-hud.js';
 import { initCookieConsent } from './cookie-consent.js';
 
 /** @type {CursorWave|null} */
 let cursorWaveInstance = null;
 
+// Schedule non-critical initialization to run during idle periods after first paint (0ms TBT)
+function runIdle(fn, timeout = 250) {
+  if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
+    window.requestIdleCallback(() => fn(), { timeout });
+  } else {
+    setTimeout(fn, 60);
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-  initThemeHud();          // Apply saved theme + mount HUD
-  initCookieConsent();     // GDPR Cookie & Retention Modal
-  initGlobalCursorWave();  // CursorWave uses current theme colors
+  // 1. Critical fast-path: set data-theme immediately to prevent theme/style flash (<0.1ms)
+  applySavedTheme();
+
+  // 2. Critical UI: immediate click responsiveness for navbar and mobile drawer (<1ms)
   initNavbar();
   initMobileMenu();
-  initScrollReveal();
-  initCounters();
-  initContactForm();
-  initFilterTabs();
+
+  // 3. Non-critical deferred: canvas animation, HUD DOM, GDPR modal, counters & observers
+  runIdle(() => {
+    initThemeHud();
+    initCookieConsent();
+    initGlobalCursorWave();
+    initScrollReveal();
+    initCounters();
+    initContactForm();
+    initFilterTabs();
+  });
 
   // Listen for dynamic theme changes to update CursorWave
   window.addEventListener('themechange', (e) => {

@@ -342,13 +342,20 @@ function buildHUD() {
 }
 
 /**
- * Initialize the Theme HUD.
- * Call this from main.js inside DOMContentLoaded.
+ * Fast-path: apply saved theme to <html> immediately to prevent flash of wrong theme.
  */
-export function initThemeHud() {
-  // Apply saved theme immediately
+export function applySavedTheme() {
   const saved = getSavedTheme();
   document.documentElement.setAttribute('data-theme', saved);
+  return saved;
+}
+
+/**
+ * Initialize the Theme HUD.
+ * Call this from main.js (can be deferred after first paint).
+ */
+export function initThemeHud() {
+  const saved = applySavedTheme();
 
   // Build the HUD UI
   buildHUD();
