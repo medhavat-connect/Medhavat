@@ -8,15 +8,24 @@ function criticalCssPlugin() {
     apply: 'build',
     transformIndexHtml(html) {
       try {
-        const tokensCss = readFileSync(resolve(__dirname, 'assets/css/tokens.css'), 'utf8')
-          .replace(/\/\*[\s\S]*?\*\//g, '')
-          .replace(/\s+/g, ' ')
-          .trim();
+        const tokensCss = readFileSync(resolve(__dirname, 'assets/css/tokens.css'), 'utf8');
+        const cursorWaveCss = readFileSync(resolve(__dirname, 'assets/css/cursor-wave.css'), 'utf8');
+        const componentsCss = readFileSync(resolve(__dirname, 'assets/css/components.css'), 'utf8');
 
-        const inlinedTokens = `<style id="critical-tokens">${tokensCss}</style>`;
+        function minify(css) {
+          return css
+            .replace(/\/\*[\s\S]*?\*\//g, '')
+            .replace(/@import\s+['"][^'"]+['"];?/g, '')
+            .replace(/\s+/g, ' ')
+            .replace(/\s*([:;{}])\s*/g, '$1')
+            .trim();
+        }
+
+        const criticalCss = minify(tokensCss + '\n' + cursorWaveCss + '\n' + componentsCss);
+        const inlinedBlock = `<style id="medhavat-critical-css">${criticalCss}</style>`;
 
         return html
-          .replace('</head>', `  ${inlinedTokens}\n</head>`)
+          .replace('</head>', `  ${inlinedBlock}\n</head>`)
           .replace(
             /<link rel="stylesheet" crossorigin href="([^"]+\.css)">/g,
             '<link rel="preload" as="style" href="$1" crossorigin onload="this.onload=null;this.rel=\'stylesheet\'">\n  <noscript><link rel="stylesheet" crossorigin href="$1"></noscript>'

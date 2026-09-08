@@ -16,8 +16,9 @@
   <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg">
 
   <!-- Critical Font Preloading for LCP & Typography Stability -->
-  <link rel="preload" href="./assets/fonts/PlusJakartaSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="./assets/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/PlusJakartaSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/Inter-Medium.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="dns-prefetch" href="https://wa.me">
 
   <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
@@ -195,6 +196,8 @@
   <link rel="stylesheet" href="./assets/css/cookie-consent.css">
 </head>
 <body data-page="services">
+  <!-- Statically Reserved Canvas Container (Zero Layout Shift / CLS < 0.1) -->
+  <div id="cw-global-canvas-container" aria-hidden="true"></div>
 
   <!-- ── Header & Navigation ───────────────────────────────── -->
   <header class="nav" id="navbar" role="banner">
@@ -521,6 +524,8 @@
     </div>
   </footer>
 
+  <!-- Statically Reserved Overlay Container -->
+  <div id="cookie-consent-container" aria-hidden="true"></div>
   <script type="module" src="./assets/js/main.js"></script>
 </body>
 </html>

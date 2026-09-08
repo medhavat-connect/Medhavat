@@ -56,10 +56,14 @@ export function saveCookieConsent(prefs) {
  */
 export function initCookieConsent() {
   // Prevent duplicate mount
-  if (document.getElementById('cookie-consent-container')) return;
+  if (document.getElementById('cookie-banner')) return;
 
-  const container = document.createElement('div');
-  container.id = 'cookie-consent-container';
+  let container = document.getElementById('cookie-consent-container');
+  const wasExisting = !!container;
+  if (!container) {
+    container = document.createElement('div');
+    container.id = 'cookie-consent-container';
+  }
 
   container.innerHTML = `
     <!-- ── Cookie Banner ─────────────────────────────────── -->
@@ -191,7 +195,9 @@ export function initCookieConsent() {
     </div>
   `;
 
-  document.body.appendChild(container);
+  if (!wasExisting) {
+    document.body.appendChild(container);
+  }
 
   // ── Element Bindings ──
   const banner = document.getElementById('cookie-banner');
