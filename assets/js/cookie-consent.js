@@ -214,6 +214,9 @@ export function initCookieConsent() {
   const checkMarketing = document.getElementById('cookie-pref-marketing');
 
   function showBanner() {
+    // Remove inert before showing so buttons are focusable/reachable
+    container.removeAttribute('inert');
+    container.removeAttribute('aria-hidden');
     setTimeout(() => {
       if (banner) banner.classList.add('visible');
     }, 800);
@@ -221,6 +224,11 @@ export function initCookieConsent() {
 
   function hideBanner() {
     if (banner) banner.classList.remove('visible');
+    // Once the banner is dismissed and modal is closed, mark container inert
+    // so focusable children are no longer reachable (fixes ARIA audit failure)
+    if (!modalOverlay || !modalOverlay.classList.contains('open')) {
+      container.setAttribute('inert', '');
+    }
   }
 
   function openModal() {
@@ -230,11 +238,18 @@ export function initCookieConsent() {
       if (checkAnalytics) checkAnalytics.checked = !!existing.analytics;
       if (checkMarketing) checkMarketing.checked = !!existing.marketing;
     }
+    // Remove inert so modal buttons are focusable
+    container.removeAttribute('inert');
+    container.removeAttribute('aria-hidden');
     if (modalOverlay) modalOverlay.classList.add('open');
   }
 
   function closeModal() {
     if (modalOverlay) modalOverlay.classList.remove('open');
+    // Re-apply inert if banner is also not visible
+    if (!banner || !banner.classList.contains('visible')) {
+      container.setAttribute('inert', '');
+    }
   }
 
   // ── Event Handlers ──
@@ -317,6 +332,10 @@ export function initCookieConsent() {
   // Check initial state
   const existingConsent = getCookieConsent();
   if (!existingConsent) {
-    showBanner();
+    showBanner(); // showBanner() removes inert before displaying
+  } else {
+    // Consent already given — keep container inert so hidden buttons
+    // are not in the focus order or accessibility tree
+    container.setAttribute('inert', '');
   }
 }
