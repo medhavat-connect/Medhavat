@@ -5,7 +5,7 @@
  */
 
 const STORAGE_KEY = 'medhavat-theme';
-const DEFAULT_THEME = 'night-grey';
+const DEFAULT_THEME = 'day-colour';
 
 export const THEMES = {
   'night-colour': {
