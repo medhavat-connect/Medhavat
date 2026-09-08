@@ -5,32 +5,146 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- SEO & AEO Primary Metadata -->
-  <title>Portfolio & Case Studies | Medhavat — Real Business Results</title>
+  <title>Portfolio & Case Studies | Medhavat — Proven Enterprise Deliveries</title>
   <meta name="description" content="Explore Medhavat's portfolio of delivered projects: healthcare operations software, intelligent document RAG workspaces, high-converting ecommerce platforms, and digital growth systems.">
   <meta name="keywords" content="Medhavat Portfolio, Software Case Studies, Healthcare Tech Platform, Enterprise AI Workspace, E-commerce Case Study, Pune Tech Partner">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://medhavat.com/portfolio.html">
+  <meta name="author" content="Medhavat">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://medhavat.com/portfolio">
+  <link rel="alternate" hreflang="en" href="https://medhavat.com/portfolio">
+  <link rel="alternate" hreflang="x-default" href="https://medhavat.com/portfolio">
   <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg">
 
-  <!-- Open Graph / Facebook -->
+  <!-- Critical Font Preloading for LCP & Typography Stability -->
+  <link rel="preload" href="./assets/fonts/PlusJakartaSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./assets/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://medhavat.com/portfolio.html">
-  <meta property="og:title" content="Portfolio & Case Studies | Medhavat — Real Business Results">
+  <meta property="og:url" content="https://medhavat.com/portfolio">
+  <meta property="og:title" content="Portfolio & Case Studies | Medhavat — Proven Enterprise Deliveries">
   <meta property="og:description" content="Discover how Medhavat transforms businesses through custom software, AI automation, and high-performance digital platforms.">
   <meta property="og:site_name" content="Medhavat">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://medhavat.com/assets/images/og-image.svg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/svg+xml">
+  <meta property="og:image:alt" content="Medhavat Case Studies and Portfolio">
 
-  <!-- Schema.org JSON-LD Structured Data -->
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://medhavat.com/portfolio">
+  <meta name="twitter:title" content="Portfolio & Case Studies | Medhavat — Proven Enterprise Deliveries">
+  <meta name="twitter:description" content="Discover how Medhavat transforms businesses through custom software, AI automation, and high-performance digital platforms.">
+  <meta name="twitter:image" content="https://medhavat.com/assets/images/og-image.svg">
+  <meta name="twitter:image:alt" content="Medhavat Case Studies and Portfolio">
+
+  <!-- Schema.org JSON-LD Structured Data: Breadcrumb & Case Studies Collection -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "Medhavat Portfolio & Case Studies",
-    "description": "Showcase of delivered software, AI systems, and digital transformations by Medhavat.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Medhavat",
-      "url": "https://medhavat.com"
-    }
+    "@graph": [
+      {
+        "@type": ["Organization", "ProfessionalService"],
+        "@id": "https://medhavat.com/#organization",
+        "name": "Medhavat",
+        "legalName": "Medhavat Technologies",
+        "url": "https://medhavat.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://medhavat.com/assets/images/medhavat-logo.svg",
+          "caption": "Medhavat Logo"
+        },
+        "image": "https://medhavat.com/assets/images/og-image.svg",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Magarpatta, Hadapsar",
+          "addressLocality": "Pune",
+          "addressRegion": "Maharashtra",
+          "postalCode": "411028",
+          "addressCountry": "IN"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91 73878 53665",
+          "contactType": "customer service",
+          "email": "info@medhavat.com"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://medhavat.com/#website",
+        "url": "https://medhavat.com",
+        "name": "Medhavat"
+      },
+      {
+        "@type": "CollectionPage",
+        "@id": "https://medhavat.com/portfolio#webpage",
+        "url": "https://medhavat.com/portfolio",
+        "name": "Portfolio & Case Studies | Medhavat — Proven Enterprise Deliveries",
+        "description": "Showcase of delivered software, AI systems, and digital transformations by Medhavat.",
+        "isPartOf": { "@id": "https://medhavat.com/#website" },
+        "breadcrumb": { "@id": "https://medhavat.com/portfolio#breadcrumb" },
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [".hero__title", ".hero__sub", ".section-header__sub"]
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://medhavat.com/portfolio#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://medhavat.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Portfolio",
+            "item": "https://medhavat.com/portfolio"
+          }
+        ]
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://medhavat.com/portfolio#projects",
+        "name": "Featured Project Deliveries",
+        "itemListElement": [
+          {
+            "@type": "CreativeWork",
+            "position": 1,
+            "name": "Healthcare Operations Platform",
+            "description": "Custom software architecture and automated care coordination platform connecting patient intake, diagnostic records, physician scheduling, and billing into an integrated dashboard.",
+            "creator": { "@id": "https://medhavat.com/#organization" }
+          },
+          {
+            "@type": "CreativeWork",
+            "position": 2,
+            "name": "Intelligent Document Workspace",
+            "description": "A private RAG-powered knowledge engine that turns thousands of scattered technical PDFs, internal policies, and compliance documents into instant, fully cited natural language answers.",
+            "creator": { "@id": "https://medhavat.com/#organization" }
+          },
+          {
+            "@type": "CreativeWork",
+            "position": 3,
+            "name": "Commerce Experience Rebuild",
+            "description": "A high-performance modern ecommerce storefront engineered around sub-second page loads, intuitive mobile discovery, one-click checkout, and dynamic multi-currency payment handling.",
+            "creator": { "@id": "https://medhavat.com/#organization" }
+          },
+          {
+            "@type": "CreativeWork",
+            "position": 4,
+            "name": "Growth Identity & Acquisition System",
+            "description": "Comprehensive brand identity overhaul combined with structured technical SEO architecture, programmatic content landing pages, and lead qualification funnels for a B2B SaaS enterprise.",
+            "creator": { "@id": "https://medhavat.com/#organization" }
+          }
+        ]
+      }
+    ]
   }
   </script>
 
@@ -44,25 +158,25 @@
 <body data-page="portfolio">
 
   <!-- ── Header & Navigation ───────────────────────────────── -->
-  <header class="nav" id="navbar">
+  <header class="nav" id="navbar" role="banner">
     <div class="nav__inner">
-      <a href="./index.html" class="nav__logo" aria-label="Medhavat Home">
+      <a href="/" class="nav__logo" aria-label="Medhavat Home">
         <div class="nav__logo-mark">
-          <img src="./assets/images/medhavat-logo.svg" alt="Medhavat Logo" width="24" height="21" style="filter: brightness(0) invert(1);" />
+          <img src="./assets/images/medhavat-logo.svg" alt="Medhavat Technology Platform Logo" width="24" height="21" fetchpriority="high" style="filter: brightness(0) invert(1);" />
         </div>
         <div class="nav__logo-text">Medha<span>vat</span></div>
       </a>
 
-      <nav class="nav__links" aria-label="Main Navigation">
-        <a href="./index.html" class="nav__link">Home</a>
-        <a href="./services.html" class="nav__link">Services</a>
-        <a href="./portfolio.html" class="nav__link active">Portfolio</a>
-        <a href="./insights.html" class="nav__link">Insights</a>
-        <a href="./contact.html" class="nav__link">Contact</a>
+      <nav class="nav__links" aria-label="Main Navigation" role="navigation">
+        <a href="/" class="nav__link">Home</a>
+        <a href="/services" class="nav__link">Services</a>
+        <a href="/portfolio" class="nav__link active">Portfolio</a>
+        <a href="/insights" class="nav__link">Insights</a>
+        <a href="/contact" class="nav__link">Contact</a>
       </nav>
 
       <div class="nav__cta">
-        <a href="./contact.html" class="btn btn--primary btn--sm">Get Started</a>
+        <a href="/contact" class="btn btn--primary btn--sm">Get Started</a>
       </div>
 
       <button class="nav__hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
@@ -74,16 +188,16 @@
   </header>
 
   <!-- Mobile Drawer -->
-  <div class="nav__drawer" aria-label="Mobile Navigation Menu">
-    <a href="./index.html" class="nav__link">Home</a>
-    <a href="./services.html" class="nav__link">Services</a>
-    <a href="./portfolio.html" class="nav__link active">Portfolio</a>
-    <a href="./insights.html" class="nav__link">Insights</a>
-    <a href="./contact.html" class="nav__link">Contact</a>
-    <a href="./contact.html" class="btn btn--primary btn--lg" style="margin-top: var(--space-4);">Get Started</a>
-  </div>
+  <nav class="nav__drawer" aria-label="Mobile Navigation Menu" role="navigation">
+    <a href="/" class="nav__link">Home</a>
+    <a href="/services" class="nav__link">Services</a>
+    <a href="/portfolio" class="nav__link active">Portfolio</a>
+    <a href="/insights" class="nav__link">Insights</a>
+    <a href="/contact" class="nav__link">Contact</a>
+    <a href="/contact" class="btn btn--primary btn--lg" style="margin-top: var(--space-4);">Get Started</a>
+  </nav>
 
-  <main id="main-content">
+  <main id="main-content" role="main">
     <!-- ── Portfolio Hero Stage ──────────────────────────────── -->
     <section class="cw-stage cw-stage--hero" id="portfolio-hero">
       <div class="container hero cw-content">
@@ -103,7 +217,7 @@
 
         <div class="hero__actions" data-cursor-wave-mask>
           <a href="#projects" class="btn btn--primary btn--lg">View Projects ↓</a>
-          <a href="./contact.html" class="btn btn--ghost btn--lg">Discuss Your Project</a>
+          <a href="/contact" class="btn btn--ghost btn--lg">Discuss Your Project</a>
         </div>
       </div>
     </section>
@@ -137,7 +251,7 @@
                 <div class="portfolio-card__outcome">Real-time bed and physician availability tracking</div>
               </div>
               <div style="margin-top: var(--space-6);">
-                <a href="./contact.html" class="btn btn--outline btn--sm">Request Case Study Brief →</a>
+                <a href="/contact" class="btn btn--outline btn--sm">Request Case Study Brief →</a>
               </div>
             </div>
           </article>
@@ -159,7 +273,7 @@
                 <div class="portfolio-card__outcome">Direct line-item source citation verification</div>
               </div>
               <div style="margin-top: var(--space-6);">
-                <a href="./contact.html" class="btn btn--outline btn--sm">Request Case Study Brief →</a>
+                <a href="/contact" class="btn btn--outline btn--sm">Request Case Study Brief →</a>
               </div>
             </div>
           </article>
@@ -181,7 +295,7 @@
                 <div class="portfolio-card__outcome">Seamless ERP and warehouse inventory sync</div>
               </div>
               <div style="margin-top: var(--space-6);">
-                <a href="./contact.html" class="btn btn--outline btn--sm">Request Case Study Brief →</a>
+                <a href="/contact" class="btn btn--outline btn--sm">Request Case Study Brief →</a>
               </div>
             </div>
           </article>
@@ -203,7 +317,7 @@
                 <div class="portfolio-card__outcome">Cohesive multi-channel design system & guidelines</div>
               </div>
               <div style="margin-top: var(--space-6);">
-                <a href="./contact.html" class="btn btn--outline btn--sm">Request Case Study Brief →</a>
+                <a href="/contact" class="btn btn--outline btn--sm">Request Case Study Brief →</a>
               </div>
             </div>
           </article>
@@ -259,8 +373,8 @@
             Let's evaluate your technical requirements and produce a clear, milestone-driven roadmap.
           </p>
           <div class="cta-banner__actions">
-            <a href="./contact.html" class="btn btn--primary btn--lg">Start Your Project →</a>
-            <a href="./services.html" class="btn btn--ghost btn--lg">Explore Services</a>
+            <a href="/contact" class="btn btn--primary btn--lg">Start Your Project →</a>
+            <a href="/services" class="btn btn--ghost btn--lg">Explore Services</a>
           </div>
         </div>
       </div>
@@ -268,13 +382,13 @@
   </main>
 
   <!-- ── Footer ────────────────────────────────────────────── -->
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
           <div class="nav__logo">
             <div class="nav__logo-mark">
-              <img src="./assets/images/medhavat-logo.svg" alt="Medhavat Logo" width="24" height="21" style="filter: brightness(0) invert(1);" />
+              <img src="./assets/images/medhavat-logo.svg" alt="Medhavat Technology Platform Logo" width="24" height="21" loading="lazy" decoding="async" style="filter: brightness(0) invert(1);" />
             </div>
             <div class="nav__logo-text">Medha<span>vat</span></div>
           </div>
@@ -293,30 +407,30 @@
           </div>
         </div>
 
-        <div>
-          <h4 class="footer__col-title">Navigation</h4>
-          <a href="./index.html" class="footer__link">Home</a>
-          <a href="./services.html" class="footer__link">Services</a>
-          <a href="./portfolio.html" class="footer__link">Portfolio</a>
-          <a href="./insights.html" class="footer__link">Insights</a>
-          <a href="./contact.html" class="footer__link">Contact</a>
-        </div>
+        <nav aria-label="Footer Navigation">
+          <h3 class="footer__col-title">Navigation</h3>
+          <a href="/" class="footer__link">Home</a>
+          <a href="/services" class="footer__link">Services</a>
+          <a href="/portfolio" class="footer__link">Portfolio</a>
+          <a href="/insights" class="footer__link">Insights</a>
+          <a href="/contact" class="footer__link">Contact</a>
+        </nav>
 
-        <div>
-          <h4 class="footer__col-title">Case Studies</h4>
+        <nav aria-label="Footer Case Studies">
+          <h3 class="footer__col-title">Case Studies</h3>
           <a href="#projects" class="footer__link">Healthcare Operations</a>
           <a href="#projects" class="footer__link">Document AI RAG</a>
           <a href="#projects" class="footer__link">Ecommerce Platform</a>
           <a href="#projects" class="footer__link">Growth Architecture</a>
-          <a href="./services.html" class="footer__link">All Services</a>
-        </div>
+          <a href="/services" class="footer__link">All Services</a>
+        </nav>
 
         <div>
-          <h4 class="footer__col-title">Direct Connect</h4>
+          <h3 class="footer__col-title">Direct Connect</h3>
           <a href="https://wa.me/917387853665" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp btn--sm" style="margin-bottom: var(--space-3); width: 100%;">
             Chat on WhatsApp
           </a>
-          <a href="./contact.html" class="btn btn--outline btn--sm" style="width: 100%;">
+          <a href="/contact" class="btn btn--outline btn--sm" style="width: 100%;">
             Schedule a Call
           </a>
         </div>
@@ -325,8 +439,8 @@
       <div class="footer__bottom">
         <div>© 2026 Medhavat. All rights reserved. Registered in Pune, India.</div>
         <div class="footer__legal">
-          <a href="./privacy-policy.html">Privacy Policy</a>
-          <a href="./terms.html">Terms of Service</a>
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
           <a href="#" data-open-cookies>Cookie Settings</a>
         </div>
       </div>

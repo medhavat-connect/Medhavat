@@ -6,43 +6,128 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- SEO & AEO Primary Metadata -->
-  <title>Contact Medhavat — Strategy Consultation & Project Inquiries</title>
+  <title>Contact Medhavat — Strategy Consultation &amp; Project Inquiries</title>
   <meta name="description"
     content="Get in touch with Medhavat for a free digital transformation and AI strategy consultation. Connect via form, WhatsApp, calendar booking, or visit us in Pune, India.">
   <meta name="keywords"
     content="Contact Medhavat, Software Consultation Pune, Book Strategy Call, AI Project Inquiry, Hire Developers Pune">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://medhavat.com/contact.html">
+  <meta name="author" content="Medhavat">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://medhavat.com/contact">
+  <link rel="alternate" hreflang="en" href="https://medhavat.com/contact">
+  <link rel="alternate" hreflang="x-default" href="https://medhavat.com/contact">
   <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg">
 
-  <!-- Open Graph / Facebook -->
+  <!-- Critical Font Preloading for LCP & Typography Stability -->
+  <link rel="preload" href="./assets/fonts/PlusJakartaSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./assets/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://medhavat.com/contact.html">
-  <meta property="og:title" content="Contact Medhavat — Strategy Consultation & Project Inquiries">
+  <meta property="og:url" content="https://medhavat.com/contact">
+  <meta property="og:title" content="Contact Medhavat — Strategy Consultation &amp; Project Inquiries">
   <meta property="og:description"
     content="Get a free consultation from our experts. No obligation, no pressure. Connect via form, WhatsApp, or instant calendar booking.">
   <meta property="og:site_name" content="Medhavat">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://medhavat.com/assets/images/og-image.svg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/svg+xml">
+  <meta property="og:image:alt" content="Contact Medhavat Technologies">
 
-  <!-- Schema.org JSON-LD Structured Data: ContactPage -->
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://medhavat.com/contact">
+  <meta name="twitter:title" content="Contact Medhavat — Strategy Consultation &amp; Project Inquiries">
+  <meta name="twitter:description"
+    content="Get a free consultation from our experts. No obligation, no pressure. Connect via form, WhatsApp, or instant calendar booking.">
+  <meta name="twitter:image" content="https://medhavat.com/assets/images/og-image.svg">
+  <meta name="twitter:image:alt" content="Contact Medhavat Technologies">
+
+  <!-- Schema.org JSON-LD Structured Data: Organization, ContactPage & ProfessionalService -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ContactPage",
-    "name": "Contact Medhavat",
-    "description": "Direct contact options, consultation qualification form, WhatsApp chat, and calendar booking for Medhavat.",
-    "mainEntity": {
-      "@type": "Organization",
-      "name": "Medhavat",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Magarpatta, Hadapsar",
-        "addressLocality": "Pune",
-        "addressRegion": "Maharashtra",
-        "addressCountry": "IN"
+    "@graph": [
+      {
+        "@type": ["Organization", "ProfessionalService"],
+        "@id": "https://medhavat.com/#organization",
+        "name": "Medhavat",
+        "legalName": "Medhavat Technologies",
+        "url": "https://medhavat.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://medhavat.com/assets/images/medhavat-logo.svg",
+          "caption": "Medhavat Logo"
+        },
+        "image": "https://medhavat.com/assets/images/og-image.svg",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Magarpatta, Hadapsar",
+          "addressLocality": "Pune",
+          "addressRegion": "Maharashtra",
+          "postalCode": "411028",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 18.517926,
+          "longitude": 73.923486
+        },
+        "telephone": "+91 73878 53665",
+        "email": "info@medhavat.com",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91 73878 53665",
+          "contactType": "customer service",
+          "email": "info@medhavat.com",
+          "availableLanguage": ["English", "Hindi", "Marathi"]
+        },
+        "sameAs": [
+          "https://wa.me/917387853665",
+          "https://github.com/wsmaisys/Medhavat"
+        ]
       },
-      "telephone": "+91 73878 53665",
-      "email": "info@medhavat.com"
-    }
+      {
+        "@type": "WebSite",
+        "@id": "https://medhavat.com/#website",
+        "url": "https://medhavat.com",
+        "name": "Medhavat"
+      },
+      {
+        "@type": "ContactPage",
+        "@id": "https://medhavat.com/contact#webpage",
+        "url": "https://medhavat.com/contact",
+        "name": "Contact Medhavat — Strategy Consultation & Project Inquiries",
+        "description": "Direct contact options, consultation qualification form, WhatsApp chat, and calendar booking for Medhavat.",
+        "isPartOf": { "@id": "https://medhavat.com/#website" },
+        "about": { "@id": "https://medhavat.com/#organization" },
+        "breadcrumb": { "@id": "https://medhavat.com/contact#breadcrumb" },
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [".hero__title", ".hero__sub"]
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://medhavat.com/contact#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://medhavat.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Contact",
+            "item": "https://medhavat.com/contact"
+          }
+        ]
+      }
+    ]
   }
   </script>
 
@@ -57,20 +142,20 @@
 <body data-page="contact">
 
   <!-- ── Header & Navigation ───────────────────────────────── -->
-  <header class="nav" id="navbar">
+  <header class="nav" id="navbar" role="banner">
     <div class="nav__inner">
-      <a href="./index.html" class="nav__logo" aria-label="Medhavat Home">
+      <a href="/" class="nav__logo" aria-label="Medhavat Home">
         <div class="nav__logo-mark">
-          <img src="./assets/images/medhavat-logo.svg" alt="Medhavat Logo" width="24" height="21"
+          <img src="./assets/images/medhavat-logo.svg" alt="Medhavat Technology Platform Logo" width="24" height="21" fetchpriority="high"
             style="filter: brightness(0) invert(1);" />
         </div>
         <div class="nav__logo-text">Medha<span>vat</span></div>
       </a>
 
-      <nav class="nav__links" aria-label="Main Navigation">
-        <a href="./index.html" class="nav__link">Home</a>
-        <a href="./services.html" class="nav__link">Services</a>
-        <a href="./contact.html" class="nav__link active">Contact</a>
+      <nav class="nav__links" aria-label="Main Navigation" role="navigation">
+        <a href="/" class="nav__link">Home</a>
+        <a href="/services" class="nav__link">Services</a>
+        <a href="/contact" class="nav__link active">Contact</a>
       </nav>
 
       <div class="nav__cta">
@@ -86,14 +171,14 @@
   </header>
 
   <!-- Mobile Drawer -->
-  <div class="nav__drawer" aria-label="Mobile Navigation Menu">
-    <a href="./index.html" class="nav__link">Home</a>
-    <a href="./services.html" class="nav__link">Services</a>
-    <a href="./contact.html" class="nav__link active">Contact</a>
-    <a href="./contact.html" class="btn btn--primary btn--lg" style="margin-top: var(--space-4);">Get Started</a>
-  </div>
+  <nav class="nav__drawer" aria-label="Mobile Navigation Menu" role="navigation">
+    <a href="/" class="nav__link">Home</a>
+    <a href="/services" class="nav__link">Services</a>
+    <a href="/contact" class="nav__link active">Contact</a>
+    <a href="/contact" class="btn btn--primary btn--lg" style="margin-top: var(--space-4);">Get Started</a>
+  </nav>
 
-  <main id="main-content">
+  <main id="main-content" role="main">
     <!-- ── Contact Hero Stage ────────────────────────────────── -->
     <section class="cw-stage cw-stage--hero" id="contact-hero">
       <div class="container hero cw-content">
@@ -123,9 +208,10 @@
     <!-- ── Fast Contact Options ──────────────────────────────── -->
     <section class="section section--sm" id="channels">
       <div class="container">
+        <h2 class="sr-only">Fast Communication Channels</h2>
         <div class="grid-2">
           <!-- Option 1: WhatsApp -->
-          <div class="contact-method reveal reveal-delay-1" data-cursor-wave-mask>
+          <article class="contact-method reveal reveal-delay-1" data-cursor-wave-mask>
             <div class="contact-method__icon"
               style="background: rgba(37, 211, 102, 0.15); border-color: rgba(37, 211, 102, 0.3);">💬</div>
             <h3 class="contact-method__title">Instant WhatsApp</h3>
@@ -135,10 +221,10 @@
               class="btn btn--whatsapp btn--sm" style="width: 100%; margin-top: auto;">
               Open WhatsApp (+91 73878 53665)
             </a>
-          </div>
+          </article>
 
           <!-- Option 3: Direct Email & Phone -->
-          <div class="contact-method reveal reveal-delay-3" data-cursor-wave-mask>
+          <article class="contact-method reveal reveal-delay-3" data-cursor-wave-mask>
             <div class="contact-method__icon">📍</div>
             <h3 class="contact-method__title">Direct Office & Email</h3>
             <p class="contact-method__desc">
@@ -149,7 +235,7 @@
             <a href="mailto:info@medhavat.com" class="btn btn--outline btn--sm" style="width: 100%; margin-top: auto;">
               Send Email Inquiry
             </a>
-          </div>
+          </article>
         </div>
       </div>
     </section>
@@ -174,7 +260,7 @@
               We've received your project inquiry. Our technical lead will review your specifications and contact you
               within 24 hours.
             </p>
-            <a href="./index.html" class="btn btn--primary btn--md" style="margin-top: var(--space-6);">Back to
+            <a href="/" class="btn btn--primary btn--md" style="margin-top: var(--space-6);">Back to
               Homepage</a>
           </div>
 
@@ -183,26 +269,26 @@
             <div class="form-grid">
               <div class="form-group">
                 <label class="form-label" for="full-name">Full Name *</label>
-                <input class="form-input" type="text" id="full-name" name="name" placeholder="Your full name" required>
+                <input class="form-input" type="text" id="full-name" name="name" placeholder="Your full name" autocomplete="name" required>
               </div>
 
               <div class="form-group">
                 <label class="form-label" for="email">Email Address *</label>
                 <input class="form-input" type="email" id="email" name="email" placeholder="your.email@example.com"
-                  required>
+                  autocomplete="email" required>
               </div>
             </div>
 
             <div class="form-grid">
               <div class="form-group">
                 <label class="form-label" for="phone">Phone Number *</label>
-                <input class="form-input" type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" required>
+                <input class="form-input" type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" autocomplete="tel" required>
               </div>
 
               <div class="form-group">
                 <label class="form-label" for="company">Company / Organization *</label>
                 <input class="form-input" type="text" id="company" name="company" placeholder="Your company name"
-                  required>
+                  autocomplete="organization" required>
               </div>
             </div>
 
@@ -283,14 +369,14 @@
   </main>
 
   <!-- ── Footer ────────────────────────────────────────────── -->
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
           <div class="nav__logo">
             <div class="nav__logo-mark">
               <img src="./assets/images/medhavat-logo.svg" alt="Medhavat Logo" width="24" height="21"
-                style="filter: brightness(0) invert(1);" />
+                loading="lazy" style="filter: brightness(0) invert(1);" />
             </div>
             <div class="nav__logo-text">Medha<span>vat</span></div>
           </div>
@@ -309,24 +395,24 @@
           </div>
         </div>
 
-        <div>
-          <h4 class="footer__col-title">Navigation</h4>
-          <a href="./index.html" class="footer__link">Home</a>
-          <a href="./services.html" class="footer__link">Services</a>
-          <a href="./contact.html" class="footer__link">Contact</a>
-        </div>
+        <nav aria-label="Footer Navigation">
+          <h3 class="footer__col-title">Navigation</h3>
+          <a href="/" class="footer__link">Home</a>
+          <a href="/services" class="footer__link">Services</a>
+          <a href="/contact" class="footer__link">Contact</a>
+        </nav>
+
+        <nav aria-label="Footer Solutions">
+          <h3 class="footer__col-title">Solutions</h3>
+          <a href="/services" class="footer__link">Custom Software</a>
+          <a href="/ai-services" class="footer__link">AI & RAG Systems</a>
+          <a href="/services" class="footer__link">Web Applications</a>
+          <a href="/services" class="footer__link">Ecommerce Stores</a>
+          <a href="/services" class="footer__link">Technical SEO</a>
+        </nav>
 
         <div>
-          <h4 class="footer__col-title">Solutions</h4>
-          <a href="./services.html" class="footer__link">Custom Software</a>
-          <a href="./ai-services.html" class="footer__link">AI & RAG Systems</a>
-          <a href="./services.html" class="footer__link">Web Applications</a>
-          <a href="./services.html" class="footer__link">Ecommerce Stores</a>
-          <a href="./services.html" class="footer__link">Technical SEO</a>
-        </div>
-
-        <div>
-          <h4 class="footer__col-title">Direct Connect</h4>
+          <h3 class="footer__col-title">Direct Connect</h3>
           <a href="https://wa.me/917387853665" target="_blank" rel="noopener noreferrer"
             class="btn btn--whatsapp btn--sm" style="margin-bottom: var(--space-3); width: 100%;">
             Chat on WhatsApp
@@ -340,8 +426,8 @@
       <div class="footer__bottom">
         <div>© 2026 Medhavat Technologies. All rights reserved. Registered in Pune, India.</div>
         <div class="footer__legal">
-          <a href="./privacy-policy.html">Privacy Policy</a>
-          <a href="./terms.html">Terms of Service</a>
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
           <a href="#" data-open-cookies>Cookie Settings</a>
         </div>
       </div>

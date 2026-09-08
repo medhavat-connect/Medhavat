@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07090E"/>
+      <stop offset="45%" stop-color="#0B1329"/>
+      <stop offset="100%" stop-color="#04060A"/>
+    </linearGradient>
+
+    <!-- Teal-Cyan Gradient -->
+    <linearGradient id="brand-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#14B8A6"/>
+      <stop offset="50%" stop-color="#0D9488"/>
+      <stop offset="100%" stop-color="#4ADE80"/>
+    </linearGradient>
+
+    <!-- Radial Glows -->
+    <radialGradient id="glow-cyan" cx="20%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#14B8A6" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#07090E" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow-green" cx="85%" cy="75%" r="50%">
+      <stop offset="0%" stop-color="#4ADE80" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#07090E" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Subtle Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(20, 184, 166, 0.05)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="630" fill="url(#bg-grad)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Atmospheric Glow Orbs -->
+  <circle cx="240" cy="200" r="320" fill="url(#glow-cyan)"/>
+  <circle cx="980" cy="460" r="300" fill="url(#glow-green)"/>
+
+  <!-- Surrounding Subtle Tech Frame -->
+  <rect x="40" y="40" width="1120" height="550" rx="16" fill="none" stroke="rgba(20, 184, 166, 0.2)" stroke-width="1.5"/>
+  <rect x="56" y="56" width="1088" height="518" rx="12" fill="none" stroke="rgba(255, 255, 255, 0.03)" stroke-width="1"/>
+
+  <!-- Corner Brackets -->
+  <path d="M 40 70 L 40 40 L 70 40" fill="none" stroke="#14B8A6" stroke-width="3"/>
+  <path d="M 1160 70 L 1160 40 L 1130 40" fill="none" stroke="#14B8A6" stroke-width="3"/>
+  <path d="M 40 560 L 40 590 L 70 590" fill="none" stroke="#14B8A6" stroke-width="3"/>
+  <path d="M 1160 560 L 1160 590 L 1130 590" fill="none" stroke="#14B8A6" stroke-width="3"/>
+
+  <!-- Top Badge: Category Pill -->
+  <g transform="translate(100, 100)">
+    <rect width="320" height="36" rx="18" fill="rgba(20, 184, 166, 0.12)" stroke="rgba(20, 184, 166, 0.35)" stroke-width="1"/>
+    <circle cx="20" cy="18" r="4" fill="#4ADE80"/>
+    <text x="34" y="23" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="12" font-weight="700" letter-spacing="1.5" fill="#14B8A6">DIGITAL TRANSFORMATION &amp; AI</text>
+  </g>
+
+  <!-- Logo Icon & Brand Name Group -->
+  <g transform="translate(100, 180)">
+    <!-- Medhavat Brand Hexagon/Matrix Glyph -->
+    <g transform="scale(2.4)">
+      <polygon points="12,2 22,8 22,18 12,24 2,18 2,8" fill="none" stroke="url(#brand-grad)" stroke-width="2"/>
+      <circle cx="12" cy="13" r="4" fill="#14B8A6"/>
+      <path d="M 12 6 L 12 9 M 18 16 L 15 14.5 M 6 16 L 9 14.5" stroke="#4ADE80" stroke-width="1.5"/>
+    </g>
+
+    <!-- Medhavat Typography -->
+    <text x="76" y="44" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="52" font-weight="800" fill="#FFFFFF" letter-spacing="-0.5">
+      Medha<tspan fill="#14B8A6">vat</tspan>
+    </text>
+  </g>
+
+  <!-- Main Value Proposition Statement -->
+  <g transform="translate(100, 290)">
+    <text font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="44" font-weight="800" fill="#F8FAFC" letter-spacing="-0.5">
+      Intellectual Tech.
+    </text>
+    <text y="58" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="44" font-weight="800" fill="url(#brand-grad)" letter-spacing="-0.5">
+      Real Business Growth.
+    </text>
+  </g>
+
+  <!-- Subtitle Paragraph -->
+  <text x="100" y="415" font-family="'Inter', system-ui, sans-serif" font-size="20" font-weight="400" fill="#94A3B8">
+    The end-to-end technology &amp; AI partner for scaling businesses across India &amp; globally.
+  </text>
+
+  <!-- 4 Capability Badges -->
+  <g transform="translate(100, 480)">
+    <g transform="translate(0, 0)">
+      <rect width="210" height="42" rx="8" fill="rgba(27, 56, 99, 0.35)" stroke="rgba(20, 184, 166, 0.25)" stroke-width="1"/>
+      <text x="105" y="26" font-family="'Inter', system-ui, sans-serif" font-size="14" font-weight="600" fill="#E2E8F0" text-anchor="middle">Custom Software</text>
+    </g>
+    <g transform="translate(225, 0)">
+      <rect width="210" height="42" rx="8" fill="rgba(27, 56, 99, 0.35)" stroke="rgba(20, 184, 166, 0.25)" stroke-width="1"/>
+      <text x="105" y="26" font-family="'Inter', system-ui, sans-serif" font-size="14" font-weight="600" fill="#E2E8F0" text-anchor="middle">Autonomous AI Agents</text>
+    </g>
+    <g transform="translate(450, 0)">
+      <rect width="210" height="42" rx="8" fill="rgba(27, 56, 99, 0.35)" stroke="rgba(20, 184, 166, 0.25)" stroke-width="1"/>
+      <text x="105" y="26" font-family="'Inter', system-ui, sans-serif" font-size="14" font-weight="600" fill="#E2E8F0" text-anchor="middle">Private Document RAG</text>
+    </g>
+    <g transform="translate(675, 0)">
+      <rect width="210" height="42" rx="8" fill="rgba(27, 56, 99, 0.35)" stroke="rgba(20, 184, 166, 0.25)" stroke-width="1"/>
+      <text x="105" y="26" font-family="'Inter', system-ui, sans-serif" font-size="14" font-weight="600" fill="#E2E8F0" text-anchor="middle">Cloud SaaS &amp; Mobile</text>
+    </g>
+  </g>
+
+  <!-- Trust Location Readout (Right Corner) -->
+  <g transform="translate(900, 118)">
+    <text font-family="'Inter', system-ui, sans-serif" font-size="13" font-weight="500" fill="#64748B" text-anchor="end">Pune, Maharashtra, India · medhavat.com</text>
+  </g>
+</svg>

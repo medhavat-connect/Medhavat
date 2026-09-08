@@ -78,7 +78,7 @@ export function initCookieConsent() {
       </div>
 
       <p class="cookie-consent__desc">
-        We use cookies to ensure fast performance, remember your theme preferences, and analyze anonymized site usage in accordance with the <strong>GDPR</strong> and <strong>Digital Personal Data Protection (DPDP) Act</strong>. Read our <a href="./privacy-policy.html">Privacy Policy</a>.
+        We use cookies to ensure fast performance, remember your theme preferences, and analyze anonymized site usage in accordance with the <strong>GDPR</strong> and <strong>Digital Personal Data Protection (DPDP) Act</strong>. Read our <a href="/privacy-policy">Privacy Policy</a>.
       </p>
 
       <div class="cookie-consent__retention-badge">

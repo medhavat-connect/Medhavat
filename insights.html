@@ -5,32 +5,161 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- SEO & AEO Primary Metadata -->
-  <title>Insights & Thinking | Medhavat — Case Studies, Tech Articles & News</title>
+  <title>Insights &amp; Engineering Perspectives | Medhavat — Case Studies &amp; Tech Research</title>
   <meta name="description" content="Explore insights, engineering teardowns, AI benchmarks, and digital transformation playbooks from the technical team at Medhavat.">
   <meta name="keywords" content="Medhavat Insights, AI Case Studies, Software Architecture Articles, Enterprise RAG Guide, Web Performance Best Practices">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://medhavat.com/insights.html">
+  <meta name="author" content="Medhavat">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://medhavat.com/insights">
+  <link rel="alternate" hreflang="en" href="https://medhavat.com/insights">
+  <link rel="alternate" hreflang="x-default" href="https://medhavat.com/insights">
   <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg">
 
-  <!-- Open Graph / Facebook -->
+  <!-- Critical Font Preloading for LCP & Typography Stability -->
+  <link rel="preload" href="./assets/fonts/PlusJakartaSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./assets/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://medhavat.com/insights.html">
-  <meta property="og:title" content="Insights & Thinking | Medhavat — Case Studies, Tech Articles & News">
+  <meta property="og:url" content="https://medhavat.com/insights">
+  <meta property="og:title" content="Insights &amp; Engineering Perspectives | Medhavat — Case Studies &amp; Tech Research">
   <meta property="og:description" content="Deep dives into enterprise software, autonomous AI agents, cloud architectures, and digital growth strategy.">
   <meta property="og:site_name" content="Medhavat">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://medhavat.com/assets/images/og-image.svg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/svg+xml">
+  <meta property="og:image:alt" content="Medhavat Insights and Engineering Articles">
 
-  <!-- Schema.org JSON-LD Structured Data -->
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://medhavat.com/insights">
+  <meta name="twitter:title" content="Insights &amp; Engineering Perspectives | Medhavat — Case Studies &amp; Tech Research">
+  <meta name="twitter:description" content="Deep dives into enterprise software, autonomous AI agents, cloud architectures, and digital growth strategy.">
+  <meta name="twitter:image" content="https://medhavat.com/assets/images/og-image.svg">
+  <meta name="twitter:image:alt" content="Medhavat Insights and Engineering Articles">
+
+  <!-- Schema.org JSON-LD Structured Data: Blog & Article Graph -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Blog",
-    "name": "Medhavat Insights",
-    "description": "Articles, case studies, and engineering perspectives on digital transformation and AI.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Medhavat",
-      "url": "https://medhavat.com"
-    }
+    "@graph": [
+      {
+        "@type": ["Organization", "ProfessionalService"],
+        "@id": "https://medhavat.com/#organization",
+        "name": "Medhavat",
+        "legalName": "Medhavat Technologies",
+        "url": "https://medhavat.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://medhavat.com/assets/images/medhavat-logo.svg",
+          "caption": "Medhavat Logo"
+        },
+        "image": "https://medhavat.com/assets/images/og-image.svg",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Magarpatta, Hadapsar",
+          "addressLocality": "Pune",
+          "addressRegion": "Maharashtra",
+          "postalCode": "411028",
+          "addressCountry": "IN"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91 73878 53665",
+          "contactType": "customer service",
+          "email": "info@medhavat.com"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://medhavat.com/#website",
+        "url": "https://medhavat.com",
+        "name": "Medhavat"
+      },
+      {
+        "@type": "Blog",
+        "@id": "https://medhavat.com/insights#blog",
+        "url": "https://medhavat.com/insights",
+        "name": "Medhavat Insights",
+        "description": "Articles, case studies, and engineering perspectives on digital transformation and AI.",
+        "publisher": { "@id": "https://medhavat.com/#organization" },
+        "breadcrumb": { "@id": "https://medhavat.com/insights#breadcrumb" },
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [".hero__title", ".hero__sub"]
+        },
+        "blogPost": [
+          {
+            "@type": "BlogPosting",
+            "headline": "How a Healthcare Network Reduced Administrative Overhead by 45%",
+            "description": "A detailed breakdown of modernizing legacy clinical workflows into a connected, HIPAA-compliant patient operations platform with real-time diagnostic synchronization.",
+            "articleSection": "Healthcare · Custom Tech",
+            "author": { "@id": "https://medhavat.com/#organization" },
+            "publisher": { "@id": "https://medhavat.com/#organization" }
+          },
+          {
+            "@type": "BlogPosting",
+            "headline": "Architecting Production Enterprise RAG: Zero Hallucination Pipelines",
+            "description": "Why naive vector retrieval fails in production, and how hybrid dense-sparse search, cross-encoder re-ranking, and dynamic chunking safeguard enterprise knowledge systems.",
+            "articleSection": "AI Engineering · RAG",
+            "author": { "@id": "https://medhavat.com/#organization" },
+            "publisher": { "@id": "https://medhavat.com/#organization" }
+          },
+          {
+            "@type": "BlogPosting",
+            "headline": "Sub-Second Core Web Vitals: Modern Zero-Dependency Web Architecture",
+            "description": "How trimming heavy JS framework runtime bloat and adopting modern native browser capabilities delivers 99+ Lighthouse scores and boosts e-commerce conversion rates.",
+            "articleSection": "Web Architecture",
+            "author": { "@id": "https://medhavat.com/#organization" },
+            "publisher": { "@id": "https://medhavat.com/#organization" }
+          },
+          {
+            "@type": "BlogPosting",
+            "headline": "Scaling an E-Commerce Platform to Handle 10x Holiday Traffic Surges",
+            "description": "Database indexing strategies, distributed Redis caching, and edge payment processing optimizations that maintained 99.99% uptime during peak retail shopping events.",
+            "articleSection": "E-Commerce · Cloud Ops",
+            "author": { "@id": "https://medhavat.com/#organization" },
+            "publisher": { "@id": "https://medhavat.com/#organization" }
+          },
+          {
+            "@type": "BlogPosting",
+            "headline": "Autonomous AI Agents vs Traditional RPA: Choosing the Right Engine",
+            "description": "A comprehensive decision framework for CTOs evaluating when to deploy LLM-based autonomous agentic loops versus deterministic robotic process automation rules.",
+            "articleSection": "AI Agents · Automation",
+            "author": { "@id": "https://medhavat.com/#organization" },
+            "publisher": { "@id": "https://medhavat.com/#organization" }
+          },
+          {
+            "@type": "BlogPosting",
+            "headline": "Medhavat Expands Enterprise AI Practice with Next-Gen Agent Engineering",
+            "description": "Announcing our expanded suite of proprietary agentic orchestration modules designed to help SMEs integrate multimodal intelligence into day-to-day operations.",
+            "articleSection": "Company News",
+            "author": { "@id": "https://medhavat.com/#organization" },
+            "publisher": { "@id": "https://medhavat.com/#organization" }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://medhavat.com/insights#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://medhavat.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Insights",
+            "item": "https://medhavat.com/insights"
+          }
+        ]
+      }
+    ]
   }
   </script>
 
@@ -44,25 +173,25 @@
 <body data-page="insights">
 
   <!-- ── Header & Navigation ───────────────────────────────── -->
-  <header class="nav" id="navbar">
+  <header class="nav" id="navbar" role="banner">
     <div class="nav__inner">
-      <a href="./index.html" class="nav__logo" aria-label="Medhavat Home">
+      <a href="/" class="nav__logo" aria-label="Medhavat Home">
         <div class="nav__logo-mark">
-          <img src="./assets/images/medhavat-logo.svg" alt="Medhavat Logo" width="24" height="21" style="filter: brightness(0) invert(1);" />
+          <img src="./assets/images/medhavat-logo.svg" alt="Medhavat Technology Platform Logo" width="24" height="21" fetchpriority="high" style="filter: brightness(0) invert(1);" />
         </div>
         <div class="nav__logo-text">Medha<span>vat</span></div>
       </a>
 
-      <nav class="nav__links" aria-label="Main Navigation">
-        <a href="./index.html" class="nav__link">Home</a>
-        <a href="./services.html" class="nav__link">Services</a>
-        <a href="./portfolio.html" class="nav__link">Portfolio</a>
-        <a href="./insights.html" class="nav__link active">Insights</a>
-        <a href="./contact.html" class="nav__link">Contact</a>
+      <nav class="nav__links" aria-label="Main Navigation" role="navigation">
+        <a href="/" class="nav__link">Home</a>
+        <a href="/services" class="nav__link">Services</a>
+        <a href="/portfolio" class="nav__link">Portfolio</a>
+        <a href="/insights" class="nav__link active">Insights</a>
+        <a href="/contact" class="nav__link">Contact</a>
       </nav>
 
       <div class="nav__cta">
-        <a href="./contact.html" class="btn btn--primary btn--sm">Get Started</a>
+        <a href="/contact" class="btn btn--primary btn--sm">Get Started</a>
       </div>
 
       <button class="nav__hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
@@ -74,26 +203,26 @@
   </header>
 
   <!-- Mobile Drawer -->
-  <div class="nav__drawer" aria-label="Mobile Navigation Menu">
-    <a href="./index.html" class="nav__link">Home</a>
-    <a href="./services.html" class="nav__link">Services</a>
-    <a href="./portfolio.html" class="nav__link">Portfolio</a>
-    <a href="./insights.html" class="nav__link active">Insights</a>
-    <a href="./contact.html" class="nav__link">Contact</a>
-    <a href="./contact.html" class="btn btn--primary btn--lg" style="margin-top: var(--space-4);">Get Started</a>
-  </div>
+  <nav class="nav__drawer" aria-label="Mobile Navigation Menu" role="navigation">
+    <a href="/" class="nav__link">Home</a>
+    <a href="/services" class="nav__link">Services</a>
+    <a href="/portfolio" class="nav__link">Portfolio</a>
+    <a href="/insights" class="nav__link active">Insights</a>
+    <a href="/contact" class="nav__link">Contact</a>
+    <a href="/contact" class="btn btn--primary btn--lg" style="margin-top: var(--space-4);">Get Started</a>
+  </nav>
 
-  <main id="main-content">
+  <main id="main-content" role="main">
     <!-- ── Insights Hero Stage ───────────────────────────────── -->
     <section class="cw-stage cw-stage--hero" id="insights-hero">
       <div class="container hero cw-content">
         <div class="hero__badge" data-cursor-wave-mask>
           <span class="dot"></span>
-          ENGINEERING INTELLIGENCE & RESEARCH
+          ENGINEERING INTELLIGENCE &amp; RESEARCH
         </div>
 
         <h1 class="hero__title" data-cursor-wave-mask>
-          Insights, Case Studies &<br>
+          Insights, Case Studies &amp;<br>
           <span class="gradient-text">Industry Thinking</span>
         </h1>
 
@@ -103,21 +232,22 @@
 
         <div class="hero__actions" data-cursor-wave-mask>
           <a href="#articles" class="btn btn--primary btn--lg">Explore Articles ↓</a>
-          <a href="./contact.html" class="btn btn--ghost btn--lg">Subscribe / Connect</a>
+          <a href="/contact" class="btn btn--ghost btn--lg">Subscribe / Connect</a>
         </div>
       </div>
     </section>
 
     <!-- ── Articles & Insights Grid with Filter Tabs ─────────── -->
-    <section class="section" id="articles">
+    <section class="section" id="articles" aria-label="Featured Articles and Case Studies">
       <div class="container">
+        <h2 class="sr-only">Featured Articles &amp; Engineering Insights</h2>
         
         <!-- Filter Tabs -->
-        <div class="filter-tabs reveal" data-cursor-wave-mask>
-          <button class="filter-tab active" data-filter="all">All Insights (6)</button>
-          <button class="filter-tab" data-filter="case-study">Case Studies</button>
-          <button class="filter-tab" data-filter="tech">Engineering & AI</button>
-          <button class="filter-tab" data-filter="news">Company News</button>
+        <div class="filter-tabs reveal" data-cursor-wave-mask role="tablist" aria-label="Filter insights by category">
+          <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">All Insights (6)</button>
+          <button class="filter-tab" data-filter="case-study" role="tab" aria-selected="false">Case Studies</button>
+          <button class="filter-tab" data-filter="tech" role="tab" aria-selected="false">Engineering &amp; AI</button>
+          <button class="filter-tab" data-filter="news" role="tab" aria-selected="false">Company News</button>
         </div>
 
         <div class="grid-3">
@@ -223,8 +353,8 @@
             Partner with an engineering team that turns cutting-edge technical insights into concrete business advantages.
           </p>
           <div class="cta-banner__actions">
-            <a href="./contact.html" class="btn btn--primary btn--lg">Talk to an Architect →</a>
-            <a href="./services.html" class="btn btn--ghost btn--lg">Explore Services</a>
+            <a href="/contact" class="btn btn--primary btn--lg">Talk to an Architect →</a>
+            <a href="/services" class="btn btn--ghost btn--lg">Explore Services</a>
           </div>
         </div>
       </div>
@@ -232,13 +362,13 @@
   </main>
 
   <!-- ── Footer ────────────────────────────────────────────── -->
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
           <div class="nav__logo">
             <div class="nav__logo-mark">
-              <img src="./assets/images/medhavat-logo.svg" alt="Medhavat Logo" width="24" height="21" style="filter: brightness(0) invert(1);" />
+              <img src="./assets/images/medhavat-logo.svg" alt="Medhavat Technology Platform Logo" width="24" height="21" loading="lazy" decoding="async" style="filter: brightness(0) invert(1);" />
             </div>
             <div class="nav__logo-text">Medha<span>vat</span></div>
           </div>
@@ -257,30 +387,30 @@
           </div>
         </div>
 
-        <div>
-          <h4 class="footer__col-title">Navigation</h4>
-          <a href="./index.html" class="footer__link">Home</a>
-          <a href="./services.html" class="footer__link">Services</a>
-          <a href="./portfolio.html" class="footer__link">Portfolio</a>
-          <a href="./insights.html" class="footer__link">Insights</a>
-          <a href="./contact.html" class="footer__link">Contact</a>
-        </div>
+        <nav aria-label="Footer Navigation">
+          <h3 class="footer__col-title">Navigation</h3>
+          <a href="/" class="footer__link">Home</a>
+          <a href="/services" class="footer__link">Services</a>
+          <a href="/portfolio" class="footer__link">Portfolio</a>
+          <a href="/insights" class="footer__link">Insights</a>
+          <a href="/contact" class="footer__link">Contact</a>
+        </nav>
 
-        <div>
-          <h4 class="footer__col-title">Categories</h4>
+        <nav aria-label="Footer Categories">
+          <h3 class="footer__col-title">Categories</h3>
           <a href="#articles" class="footer__link">Case Studies</a>
           <a href="#articles" class="footer__link">Engineering Guides</a>
           <a href="#articles" class="footer__link">AI & RAG Systems</a>
           <a href="#articles" class="footer__link">Company Updates</a>
-          <a href="./services.html" class="footer__link">All Services</a>
-        </div>
+          <a href="/services" class="footer__link">All Services</a>
+        </nav>
 
         <div>
-          <h4 class="footer__col-title">Direct Connect</h4>
+          <h3 class="footer__col-title">Direct Connect</h3>
           <a href="https://wa.me/917387853665" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp btn--sm" style="margin-bottom: var(--space-3); width: 100%;">
             Chat on WhatsApp
           </a>
-          <a href="./contact.html" class="btn btn--outline btn--sm" style="width: 100%;">
+          <a href="/contact" class="btn btn--outline btn--sm" style="width: 100%;">
             Schedule a Call
           </a>
         </div>
@@ -289,8 +419,8 @@
       <div class="footer__bottom">
         <div>© 2026 Medhavat. All rights reserved. Registered in Pune, India.</div>
         <div class="footer__legal">
-          <a href="./privacy-policy.html">Privacy Policy</a>
-          <a href="./terms.html">Terms of Service</a>
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
           <a href="#" data-open-cookies>Cookie Settings</a>
         </div>
       </div>

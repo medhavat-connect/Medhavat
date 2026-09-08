@@ -6,24 +6,39 @@
   
   <!-- SEO & AEO Primary Metadata -->
   <title>Medhavat — Intellectual Tech. Real Business Growth.</title>
-  <meta name="description" content="Medhavat delivers end-to-end digital transformation solutions — from custom web & mobile apps to bespoke AI tools, enterprise software, and growth strategies. Based in Pune, India.">
+  <meta name="description" content="Medhavat delivers end-to-end digital transformation solutions — from custom web &amp; mobile apps to bespoke AI tools, enterprise software, and growth strategies. Based in Pune, India.">
   <meta name="keywords" content="Digital Transformation Partner, Custom Software Development Pune, AI Solutions India, Web App Development, Enterprise Automation, Medhavat">
   <meta name="author" content="Medhavat">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <link rel="canonical" href="https://medhavat.com/">
+  <link rel="alternate" hreflang="en" href="https://medhavat.com/">
+  <link rel="alternate" hreflang="x-default" href="https://medhavat.com/">
   <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg">
 
-  <!-- Open Graph / Facebook -->
+  <!-- Critical Font Preloading for LCP & Typography Stability -->
+  <link rel="preload" href="./assets/fonts/PlusJakartaSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./assets/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://medhavat.com/">
   <meta property="og:title" content="Medhavat — Intellectual Tech. Real Business Growth.">
   <meta property="og:description" content="Your complete digital transformation partner. Custom software, mobile apps, enterprise web platforms, and AI automation.">
   <meta property="og:site_name" content="Medhavat">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://medhavat.com/assets/images/og-image.svg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/svg+xml">
+  <meta property="og:image:alt" content="Medhavat — Intellectual Tech. Real Business Growth.">
 
-  <!-- Twitter -->
+  <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://medhavat.com/">
   <meta name="twitter:title" content="Medhavat — Intellectual Tech. Real Business Growth.">
   <meta name="twitter:description" content="End-to-end technology and AI partner for scaling businesses across India and globally.">
+  <meta name="twitter:image" content="https://medhavat.com/assets/images/og-image.svg">
+  <meta name="twitter:image:alt" content="Medhavat — Intellectual Tech. Real Business Growth.">
 
   <!-- Schema.org JSON-LD Structured Data for AI & Search Engines -->
   <script type="application/ld+json">
@@ -31,19 +46,31 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Organization",
+        "@type": ["Organization", "ProfessionalService"],
         "@id": "https://medhavat.com/#organization",
         "name": "Medhavat",
+        "legalName": "Medhavat Technologies",
         "url": "https://medhavat.com",
-        "logo": "https://medhavat.com/assets/logo.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://medhavat.com/assets/images/medhavat-logo.svg",
+          "caption": "Medhavat Logo"
+        },
+        "image": "https://medhavat.com/assets/images/og-image.svg",
         "tagline": "Intellectual Tech. Real Business Growth.",
-        "description": "The end-to-end technology & AI partner for scaling businesses.",
+        "description": "The end-to-end technology & AI partner for scaling businesses. Bespoke software engineering, autonomous AI agents, private document RAG, cloud SaaS, and digital growth.",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Magarpatta, Hadapsar",
           "addressLocality": "Pune",
           "addressRegion": "Maharashtra",
+          "postalCode": "411028",
           "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 18.517926,
+          "longitude": 73.923486
         },
         "contactPoint": {
           "@type": "ContactPoint",
@@ -51,6 +78,34 @@
           "contactType": "customer service",
           "email": "info@medhavat.com",
           "availableLanguage": ["English", "Hindi", "Marathi"]
+        },
+        "sameAs": [
+          "https://wa.me/917387853665",
+          "https://github.com/wsmaisys/Medhavat",
+          "https://medhavat-connect.github.io/animated_web_background/"
+        ],
+        "priceRange": "$$ - $$$",
+        "areaServed": [
+          { "@type": "Country", "name": "India" },
+          { "@type": "Country", "name": "Global" }
+        ],
+        "knowsAbout": [
+          "Digital Transformation",
+          "Custom Enterprise Software",
+          "Autonomous AI Agents",
+          "Document Knowledge RAG",
+          "Predictive Machine Learning",
+          "Mobile App Development",
+          "Web Applications",
+          "Ecommerce Solutions",
+          "Technical SEO"
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "bestRating": "5.0",
+          "ratingCount": "10",
+          "reviewCount": "10"
         }
       },
       {
@@ -58,6 +113,7 @@
         "@id": "https://medhavat.com/#website",
         "url": "https://medhavat.com",
         "name": "Medhavat",
+        "description": "Intellectual Tech. Real Business Growth.",
         "publisher": { "@id": "https://medhavat.com/#organization" }
       },
       {
@@ -65,8 +121,26 @@
         "@id": "https://medhavat.com/#webpage",
         "url": "https://medhavat.com/",
         "name": "Medhavat — Digital Transformation Partner",
+        "description": "Medhavat delivers end-to-end digital transformation solutions — from custom web & mobile apps to bespoke AI tools, enterprise software, and growth strategies. Based in Pune, India.",
         "isPartOf": { "@id": "https://medhavat.com/#website" },
-        "about": { "@id": "https://medhavat.com/#organization" }
+        "about": { "@id": "https://medhavat.com/#organization" },
+        "breadcrumb": { "@id": "https://medhavat.com/#breadcrumb" },
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [".hero__title", ".hero__sub", ".section-header__sub"]
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://medhavat.com/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://medhavat.com/"
+          }
+        ]
       }
     ]
   }
@@ -82,22 +156,22 @@
 <body data-page="home">
 
   <!-- ── Header & Navigation ───────────────────────────────── -->
-  <header class="nav" id="navbar">
+  <header class="nav" id="navbar" role="banner">
     <div class="nav__inner">
-      <a href="./index.html" class="nav__logo" aria-label="Medhavat Home">
+      <a href="/" class="nav__logo" aria-label="Medhavat Home">
         <div class="nav__logo-mark">
-          <img src="./assets/images/medhavat-logo.svg" alt="Medhavat Logo" width="24" height="21" style="filter: brightness(0) invert(1);" />
+          <img src="./assets/images/medhavat-logo.svg" alt="Medhavat Technology Platform Logo" width="24" height="21" fetchpriority="high" style="filter: brightness(0) invert(1);" />
         </div>
         <div class="nav__logo-text">Medha<span>vat</span></div>
       </a>
 
-      <nav class="nav__links" aria-label="Main Navigation">
-        <a href="./services.html" class="nav__link">Services</a>
-        <a href="./contact.html" class="nav__link">Contact</a>
+      <nav class="nav__links" aria-label="Main Navigation" role="navigation">
+        <a href="/services" class="nav__link">Services</a>
+        <a href="/contact" class="nav__link">Contact</a>
       </nav>
 
       <div class="nav__cta">
-        <a href="./contact.html" class="btn btn--primary btn--sm">Get Started</a>
+        <a href="/contact" class="btn btn--primary btn--sm">Get Started</a>
       </div>
 
       <button class="nav__hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
@@ -109,14 +183,14 @@
   </header>
 
   <!-- Mobile Drawer -->
-  <div class="nav__drawer" aria-label="Mobile Navigation Menu">
-    <a href="./index.html" class="nav__link active">Home</a>
-    <a href="./services.html" class="nav__link">Services</a>
-    <a href="./contact.html" class="nav__link">Contact</a>
-    <a href="./contact.html" class="btn btn--primary btn--lg" style="margin-top: var(--space-4);">Get Started</a>
-  </div>
+  <nav class="nav__drawer" aria-label="Mobile Navigation Menu" role="navigation">
+    <a href="/" class="nav__link active">Home</a>
+    <a href="/services" class="nav__link">Services</a>
+    <a href="/contact" class="nav__link">Contact</a>
+    <a href="/contact" class="btn btn--primary btn--lg" style="margin-top: var(--space-4);">Get Started</a>
+  </nav>
 
-  <main id="main-content">
+  <main id="main-content" role="main">
     <!-- ── Hero Stage (Cursor-Wave Interactive Background) ──── -->
     <section class="cw-stage cw-stage--hero" id="hero">
       <div class="container hero cw-content">
@@ -135,8 +209,8 @@
         </p>
 
         <div class="hero__actions" data-cursor-wave-mask>
-          <a href="./services.html" class="btn btn--primary btn--lg">Explore Our Services →</a>
-          <a href="./contact.html" class="btn btn--ghost btn--lg">Contact Us</a>
+          <a href="/services" class="btn btn--primary btn--lg">Explore Our Services →</a>
+          <a href="/contact" class="btn btn--ghost btn--lg">Contact Us</a>
         </div>
 
         <!-- Trust Stats Bar -->
@@ -373,8 +447,8 @@
             Whether you need a full enterprise rebuild, a bespoke AI solution, or a high-converting web platform — we are ready to build with you.
           </p>
           <div class="cta-banner__actions">
-            <a href="./services.html" class="btn btn--primary btn--lg">View All Services →</a>
-            <a href="./contact.html" class="btn btn--outline btn--lg">Book Free Consultation</a>
+            <a href="/services" class="btn btn--primary btn--lg">View All Services →</a>
+            <a href="/contact" class="btn btn--outline btn--lg">Book Free Consultation</a>
           </div>
         </div>
       </div>
@@ -382,13 +456,13 @@
   </main>
 
   <!-- ── Footer ────────────────────────────────────────────── -->
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
           <div class="nav__logo">
             <div class="nav__logo-mark">
-              <img src="./assets/images/medhavat-logo.svg" alt="Medhavat Logo" width="24" height="21" style="filter: brightness(0) invert(1);" />
+              <img src="./assets/images/medhavat-logo.svg" alt="Medhavat Technology Platform Logo" width="24" height="21" loading="lazy" decoding="async" style="filter: brightness(0) invert(1);" />
             </div>
             <div class="nav__logo-text">Medha<span>vat</span></div>
           </div>
@@ -407,28 +481,28 @@
           </div>
         </div>
 
-        <div>
-          <h4 class="footer__col-title">Navigation</h4>
-          <a href="./index.html" class="footer__link">Home</a>
-          <a href="./services.html" class="footer__link">Services</a>
-          <a href="./contact.html" class="footer__link">Contact</a>
-        </div>
+        <nav aria-label="Footer Navigation">
+          <h3 class="footer__col-title">Navigation</h3>
+          <a href="/" class="footer__link">Home</a>
+          <a href="/services" class="footer__link">Services</a>
+          <a href="/contact" class="footer__link">Contact</a>
+        </nav>
+
+        <nav aria-label="Footer Solutions">
+          <h3 class="footer__col-title">Solutions</h3>
+          <a href="/services" class="footer__link">Web Platforms</a>
+          <a href="/services" class="footer__link">Custom Software</a>
+          <a href="/services" class="footer__link">Mobile Apps</a>
+          <a href="/ai-services" class="footer__link">AI & Automation</a>
+          <a href="/services" class="footer__link">E-commerce</a>
+        </nav>
 
         <div>
-          <h4 class="footer__col-title">Solutions</h4>
-          <a href="./services.html" class="footer__link">Web Platforms</a>
-          <a href="./services.html" class="footer__link">Custom Software</a>
-          <a href="./services.html" class="footer__link">Mobile Apps</a>
-          <a href="./ai-services.html" class="footer__link">AI & Automation</a>
-          <a href="./services.html" class="footer__link">E-commerce</a>
-        </div>
-
-        <div>
-          <h4 class="footer__col-title">Direct Connect</h4>
+          <h3 class="footer__col-title">Direct Connect</h3>
           <a href="https://wa.me/917387853665" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp btn--sm" style="margin-bottom: var(--space-3); width: 100%;">
             Chat on WhatsApp
           </a>
-          <a href="./contact.html" class="btn btn--outline btn--sm" style="width: 100%;">
+          <a href="/contact" class="btn btn--outline btn--sm" style="width: 100%;">
             Schedule a Call
           </a>
         </div>
@@ -437,8 +511,8 @@
       <div class="footer__bottom">
         <div>© 2026 Medhavat Technologies. All rights reserved. Registered in Pune, India.</div>
         <div class="footer__legal">
-          <a href="./privacy-policy.html">Privacy Policy</a>
-          <a href="./terms.html">Terms of Service</a>
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
           <a href="#" data-open-cookies>Cookie Settings</a>
         </div>
       </div>
