@@ -293,6 +293,76 @@
 
 .service-card__cta:hover { gap: var(--space-3); opacity: 0.85; }
 
+/* ── Logo Carousel (Marquee) ──────────────────────────────── */
+.logo-carousel-section {
+  padding: var(--space-4) 0;
+  border-top: 1px solid var(--glass-border);
+  border-bottom: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+  overflow: hidden;
+  position: relative;
+}
+
+.logo-carousel-section::before,
+.logo-carousel-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 150px;
+  z-index: 2;
+  pointer-events: none;
+}
+.logo-carousel-section::before {
+  left: 0;
+  background: linear-gradient(to right, var(--clr-bg-base), transparent);
+}
+.logo-carousel-section::after {
+  right: 0;
+  background: linear-gradient(to left, var(--clr-bg-base), transparent);
+}
+
+.logo-carousel {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+  width: max-content;
+  animation: scroll-carousel 30s linear infinite;
+}
+
+.logo-carousel:hover {
+  animation-play-state: paused;
+}
+
+.logo-item {
+  flex-shrink: 0;
+  height: 140px;
+  width: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3);
+  filter: grayscale(100%) opacity(0.6);
+  transition: filter var(--duration-mid) var(--ease-out), transform var(--duration-mid) var(--ease-out);
+}
+
+.logo-item:hover {
+  filter: grayscale(0%) opacity(1);
+  transform: scale(1.05);
+}
+
+.logo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+@keyframes scroll-carousel {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - (var(--space-16) / 2))); }
+}
+
 /* ── Grid Layouts ─────────────────────────────────────────── */
 .grid-2 {
   display: grid;
