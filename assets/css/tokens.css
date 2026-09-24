@@ -207,7 +207,7 @@
   --form-focus-glow:   rgba(148, 163, 184, 0.15);
 
   /* Maps filter */
-  --maps-filter:       invert(0.92) hue-rotate(195deg) saturate(0.85) contrast(1.1);
+  --maps-filter:       invert(0.92) grayscale(100%) contrast(1.1);
 
   /* Portfolio tag */
   --tag-bg:            rgba(148, 163, 184, 0.1);
@@ -439,7 +439,7 @@
 
   --form-focus-glow:   rgba(71, 85, 105, 0.12);
 
-  --maps-filter:       saturate(0) contrast(1.05);
+  --maps-filter:       grayscale(100%) contrast(1.05);
 
   --tag-bg:            rgba(71, 85, 105, 0.08);
 
