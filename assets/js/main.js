@@ -5,6 +5,7 @@
 import { CursorWave } from './cursor-wave.js';
 import { applySavedTheme, initThemeHud, THEME_CW_COLORS, THEME_CW_BG } from './theme-hud.js';
 import { initCookieConsent } from './cookie-consent.js';
+import { initAnalytics, trackEvent } from './analytics.js';
 
 /** @type {CursorWave|null} */
 let cursorWaveInstance = null;
@@ -30,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
   runIdle(() => {
     initThemeHud();
     initCookieConsent();
+    initAnalytics();
     initGlobalCursorWave();
     initScrollReveal();
     initCounters();
@@ -217,6 +219,13 @@ function initContactForm() {
       const data = await response.json();
       
       if (data.success) {
+        // Track GA4 lead generation event
+        trackEvent('generate_lead', {
+          event_category: 'Contact',
+          event_label: 'Web3Forms Submit',
+          method: 'contact_form'
+        });
+
         form.style.display = 'none';
         if (successBox) {
           successBox.classList.add('visible');
