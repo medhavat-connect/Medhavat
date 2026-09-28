@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initCounters();
     initContactForm();
     initFilterTabs();
+    initRoadmapAnimation();
   });
 
   // Listen for dynamic theme changes to update CursorWave
@@ -270,3 +271,135 @@ function initFilterTabs() {
     });
   });
 }
+
+/* ── Interactive 5-Phase Roadmap Pipeline Animation ───────── */
+function initRoadmapAnimation() {
+  const container = document.getElementById('ai-roadmap-pipeline');
+  if (!container) return;
+
+  const cards = container.querySelectorAll('.roadmap-card');
+  const statusText = document.getElementById('roadmap-status-text');
+  const btnPrev = document.getElementById('roadmap-prev');
+  const btnNext = document.getElementById('roadmap-next');
+  const btnToggle = document.getElementById('roadmap-toggle-play');
+
+  if (!cards.length) return;
+
+  let currentIndex = 0;
+  let isPlaying = true;
+  let timer = null;
+
+  const titles = [
+    'Phase 01 — Feasibility & Data Audit',
+    'Phase 02 — Rapid Sandbox MVP',
+    'Phase 03 — Deep System Integration',
+    'Phase 04 — Guardrails & Red-Teaming',
+    'Phase 05 — Production MLOps & Scaling'
+  ];
+
+  function setActive(index) {
+    currentIndex = (index + cards.length) % cards.length;
+    cards.forEach((card, idx) => {
+      if (idx === currentIndex) {
+        card.classList.add('is-active');
+        card.setAttribute('aria-selected', 'true');
+      } else {
+        card.classList.remove('is-active');
+        card.removeAttribute('aria-selected');
+      }
+    });
+
+    if (statusText) {
+      statusText.textContent = `Active Step: ${titles[currentIndex]}`;
+    }
+  }
+
+  function startTimer() {
+    stopTimer();
+    if (!isPlaying) return;
+    timer = setInterval(() => {
+      setActive(currentIndex + 1);
+    }, 3600);
+  }
+
+  function stopTimer() {
+    if (timer) {
+      clearInterval(timer);
+      timer = null;
+    }
+  }
+
+  // User interactions: hover / click / keyboard
+  cards.forEach((card, idx) => {
+    card.addEventListener('mouseenter', () => {
+      stopTimer();
+      setActive(idx);
+    });
+
+    card.addEventListener('click', () => {
+      stopTimer();
+      setActive(idx);
+    });
+
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        stopTimer();
+        setActive(idx);
+      }
+    });
+  });
+
+  container.addEventListener('mouseleave', () => {
+    if (isPlaying) startTimer();
+  });
+
+  if (btnPrev) {
+    btnPrev.addEventListener('click', (e) => {
+      e.stopPropagation();
+      stopTimer();
+      setActive(currentIndex - 1);
+      if (isPlaying) startTimer();
+    });
+  }
+
+  if (btnNext) {
+    btnNext.addEventListener('click', (e) => {
+      e.stopPropagation();
+      stopTimer();
+      setActive(currentIndex + 1);
+      if (isPlaying) startTimer();
+    });
+  }
+
+  if (btnToggle) {
+    btnToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      isPlaying = !isPlaying;
+      btnToggle.textContent = isPlaying ? '⏸' : '▶';
+      btnToggle.setAttribute('aria-label', isPlaying ? 'Pause Auto Flow' : 'Play Auto Flow');
+      if (isPlaying) {
+        startTimer();
+      } else {
+        stopTimer();
+      }
+    });
+  }
+
+  // Intersection observer to only run animation when in viewport
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          if (isPlaying && !timer) startTimer();
+        } else {
+          stopTimer();
+        }
+      });
+    }, { threshold: 0.15 });
+    observer.observe(container);
+  } else {
+    startTimer();
+  }
+}
+
